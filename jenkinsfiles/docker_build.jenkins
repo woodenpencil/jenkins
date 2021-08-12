@@ -1,0 +1,14 @@
+pipeline {
+    agent any
+    stages {
+        stage('create docker image') {
+            steps {
+				echo " =========== start building image ========== "
+				dir ('tools'){
+					sh 'docker build . '
+				}
+                
+            }
+        }
+    }
+}
