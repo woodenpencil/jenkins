@@ -6,5 +6,5 @@ RUN apk add --no-cache py-pip
 RUN pip install Flask
 COPY pyscript.py .
 ENTRYPOINT ["python3"]
-EXPOSE 5000
+EXPOSE 80
 CMD ["pyscript.py", "-flag"]
